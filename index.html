@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mobile Auto Detailing | Premium Mobile Car Detailing in Miami, FL</title>
+  <meta name="description" content="Premium mobile auto detailing in Miami, FL. Exterior, interior, full details, paint correction, ceramic coating and engine bay cleaning — delivered to your driveway. Request an appointment today.">
+  <meta name="theme-color" content="#101114">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Open Graph / social sharing (EDIT: add your live URL + a 1200x630 og-image.jpg) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mobile Auto Detailing | Miami, FL">
+  <meta property="og:description" content="Showroom-quality mobile detailing delivered straight to your driveway.">
+  <meta property="og:site_name" content="Mobile Auto Detailing">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/img/hero-car.svg" as="image" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Boot script: enables animations, runs the loader, and guarantees content is visible even if a script fails. -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.className = d.className.replace('no-js', 'js');
+      var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var done = false;
+      function ready() {
+        if (done) return; done = true;
+        d.classList.add('is-loaded');
+        setTimeout(function () { d.classList.add('is-ready'); }, rm ? 0 : 420);
+      }
+      window.addEventListener('load', function () { setTimeout(ready, rm ? 0 : 900); });
+      setTimeout(ready, 3200);
+      setTimeout(function () { if (!window.__siteReady) d.classList.add('reveal-all'); }, 4000);
+    })();
+  </script>
+
+  <!-- Structured data (EDIT: replace placeholder phone/email/URL) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoWash",
+    "name": "Mobile Auto Detailing",
+    "description": "Premium mobile auto detailing serving Miami, FL and surrounding areas.",
+    "telephone": "+1-000-000-0000",
+    "email": "book@yourbusiness.com",
+    "areaServed": { "@type": "City", "name": "Miami, FL" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Miami", "addressRegion": "FL", "addressCountry": "US" },
+    "openingHours": "Mo-Sa 08:00-18:00"
+  }
+  </script>
+
+  <!-- Animation library (GSAP + ScrollTrigger). The site still works if these fail to load. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Cinematic loading entrance -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <svg class="loader__mark" viewBox="0 0 64 64" width="56" height="56"><use href="#brand-mark"/></svg>
+      <p class="loader__name">Mobile Auto <span>Detailing</span></p>
+      <div class="loader__bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- Desktop mouse-following light -->
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <!-- Reusable SVG symbols -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="bm-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5189ff"/><stop offset="1" stop-color="#2a55d6"/></linearGradient>
+    </defs>
+    <symbol id="brand-mark" viewBox="0 0 64 64">
+      <path d="M32 6 C32 6 14 29 14 40 A18 18 0 0 0 50 40 C50 29 32 6 32 6 Z" fill="url(#bm-g)"/>
+      <path d="M23 41 A9 9 0 0 0 31 50" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".9"/>
+      <path d="M51 6 L53 12 L59 14 L53 16 L51 22 L49 16 L43 14 L49 12 Z" fill="#fff"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8Z M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-van" viewBox="0 0 24 24"><path d="M2 7h11v9H2zM13 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="6" cy="17.5" r="1.8" fill="#101114" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="17.5" r="1.8" fill="#101114" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11Z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-tt" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 3 2.5 5 5.5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor"/></symbol>
+  </svg>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#home" aria-label="Mobile Auto Detailing — home">
+        <svg class="brand__mark" viewBox="0 0 64 64" width="34" height="34" aria-hidden="true"><use href="#brand-mark"/></svg>
+        <span class="brand__text">Mobile Auto<b>Detailing</b></span>
+      </a>
+
+      <nav class="nav__menu" aria-label="Primary">
+        <ul class="nav__links">
+          <li><a class="nav__link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#services">Services</a></li>
+          <li><a class="nav__link" href="#why">Why Choose Us</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="nav__phone" href="tel:+10000000000" aria-label="Call 000-000-0000">
+          <svg width="18" height="18" aria-hidden="true"><use href="#i-phone"/></svg><span>000-000-0000</span>
+        </a>
+        <a class="btn btn--primary btn--sm nav__cta" href="#book">Book Now</a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" inert>
+    <div class="mobile-menu__glow" aria-hidden="true"></div>
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <ul>
+        <li style="--i:0"><a href="#home"><span>01</span>Home</a></li>
+        <li style="--i:1"><a href="#about"><span>02</span>About</a></li>
+        <li style="--i:2"><a href="#services"><span>03</span>Services</a></li>
+        <li style="--i:3"><a href="#why"><span>04</span>Why Choose Us</a></li>
+        <li style="--i:4"><a href="#contact"><span>05</span>Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__foot" style="--i:5">
+      <a class="btn btn--primary btn--block" href="#book">Book Your Detail <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="mobile-menu__phone" href="tel:+10000000000"><svg width="18" height="18" aria-hidden="true"><use href="#i-phone"/></svg> 000-000-0000</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__gradient"></div>
+        <div class="hero__glow hero__glow--a"></div>
+        <div class="hero__glow hero__glow--b"></div>
+        <div class="hero__grid"></div>
+        <div class="hero__vignette"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="eyebrow hero__eyebrow" data-hero style="--d:0"><span class="pulse-dot" aria-hidden="true"></span>Mobile Detailing · Miami, FL</p>
+
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__line"><span class="w"><span style="--i:0">Your</span></span> <span class="w"><span style="--i:1">car.</span></span></span>
+          <span class="hero__line"><span class="w"><span style="--i:2">Our</span></span> <span class="w"><span style="--i:3">passion.</span></span></span>
+          <span class="hero__line hero__line--accent"><span class="w"><span style="--i:4">Unmatched</span></span> <span class="w"><span style="--i:5">detail.</span></span></span>
+        </h1>
+
+          <div class="hero__car" aria-hidden="false">
+            <div class="hero__car-light" aria-hidden="true"></div>
+            <div class="hero__car-float">
+              <div class="hero__car-img">
+                <img src="assets/img/hero-car.svg" width="1200" height="440" alt="Black sports car illuminated by blue studio lighting" fetchpriority="high" decoding="async">
+                <span class="hero__sheen" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+
+        <div class="hero__bottom">
+          <p class="hero__sub" data-hero style="--d:6">Premium mobile auto detailing delivered straight to your driveway. Experience showroom-quality results without leaving home.</p>
+          <div class="hero__ctas" data-hero style="--d:7">
+            <a class="btn btn--primary btn--glow" href="#book">Book Your Detail <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="#services">Explore Services</a>
+          </div>
+          <ul class="hero__meta" data-hero style="--d:8">
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#i-van"/></svg>We come to you</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#i-clock"/></svg>Appointments Mon–Sat</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#i-pin"/></svg>Miami &amp; surrounding areas</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About section">
+        <span class="scroll-cue__mouse" aria-hidden="true"><span></span></span>
+        <span class="scroll-cue__label">Scroll</span>
+      </a>
+    </section>
+
+    <!-- Marquee band -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Exterior Detailing</span><i></i><span>Interior Detailing</span><i></i><span>Paint Correction</span><i></i><span>Ceramic Coating</span><i></i><span>Engine Bay</span><i></i>
+        <span>Exterior Detailing</span><i></i><span>Interior Detailing</span><i></i><span>Paint Correction</span><i></i><span>Ceramic Coating</span><i></i><span>Engine Bay</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="orb orb--about" data-parallax="0.3" aria-hidden="true"></div>
+      <div class="container about__grid">
+        <div class="about__head">
+          <p class="eyebrow" data-reveal>About Us</p>
+          <h2 class="h2" id="about-title" data-reveal="split">We bring the <span class="accent">showroom</span> to you.</h2>
+          <span class="accent-line" data-reveal="line" aria-hidden="true"></span>
+        </div>
+
+        <div class="about__body">
+          <p class="lead" data-reveal>Your vehicle deserves more than an ordinary wash. Our mobile detailing services combine professional techniques, premium products, and attention to detail to deliver exceptional results wherever you are.</p>
+
+          <ul class="benefits" data-stagger>
+            <li class="benefit" data-reveal>
+              <span class="icon-box"><svg width="22" height="22" aria-hidden="true"><use href="#i-sparkle"/></svg></span>
+              <div><h3>Professional Quality</h3><p>Proven techniques and careful processes for a finish you'll notice every time you walk up to your car.</p></div>
+            </li>
+            <li class="benefit" data-reveal>
+              <span class="icon-box"><svg width="22" height="22" aria-hidden="true"><use href="#i-van"/></svg></span>
+              <div><h3>Convenient Mobile Service</h3><p>We arrive at your home, office, or another approved location — no drop-offs, no waiting rooms.</p></div>
+            </li>
+            <li class="benefit" data-reveal>
+              <span class="icon-box"><svg width="22" height="22" aria-hidden="true"><use href="#i-target"/></svg></span>
+              <div><h3>Attention to Every Detail</h3><p>From door jambs to wheel barrels, we focus on the small areas that make the biggest difference.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-reveal>What We Do</p>
+            <h2 class="h2" id="services-title" data-reveal="split">Premium <span class="accent">detailing</span> services</h2>
+          </div>
+          <p class="section-head__text" data-reveal>Six specialized services, all performed on-site. Every package is quoted for your specific vehicle, size, and condition.</p>
+        </div>
+
+        <!-- EDIT SERVICES: card text lives here; the "Learn More" popup details live in script.js (SERVICE_DETAILS). -->
+        <ul class="services__grid">
+          <li data-reveal="card">
+            <article class="service-card" data-service="exterior">
+              <div class="service-card__media">
+                <img src="assets/img/service-exterior.svg" width="800" height="600" loading="lazy" decoding="async" alt="Freshly washed wheel with water droplets">
+              </div>
+              <div class="service-card__body">
+                <span class="service-card__num">01</span>
+                <h3>Exterior Detailing</h3>
+                <p>Professional exterior cleaning, hand washing, wheel cleaning, tire dressing, and finishing touches.</p>
+                <button class="link-btn" type="button" data-open-service="exterior">Learn More <span class="link-btn__arrow"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></button>
+              </div>
+            </article>
+          </li>
+          <li data-reveal="card">
+            <article class="service-card" data-service="interior">
+              <div class="service-card__media">
+                <img src="assets/img/service-interior.svg" width="800" height="600" loading="lazy" decoding="async" alt="Clean car interior with steering wheel and dashboard">
+              </div>
+              <div class="service-card__body">
+                <span class="service-card__num">02</span>
+                <h3>Interior Detailing</h3>
+                <p>Thorough interior vacuuming, surface cleaning, dashboard detailing, and interior refreshment.</p>
+                <button class="link-btn" type="button" data-open-service="interior">Learn More <span class="link-btn__arrow"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></button>
+              </div>
+            </article>
+          </li>
+          <li data-reveal="card">
+            <article class="service-card service-card--featured" data-service="full">
+              <span class="badge">Most Complete</span>
+              <div class="service-card__media">
+                <img src="assets/img/service-full.svg" width="800" height="600" loading="lazy" decoding="async" alt="Sports car under studio lighting">
+              </div>
+              <div class="service-card__body">
+                <span class="service-card__num">03</span>
+                <h3>Full Interior &amp; Exterior Detail</h3>
+                <p>A comprehensive detailing service combining interior and exterior cleaning.</p>
+                <button class="link-btn" type="button" data-open-service="full">Learn More <span class="link-btn__arrow"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></button>
+              </div>
+            </article>
+          </li>
+          <li data-reveal="card">
+            <article class="service-card" data-service="paint">
+              <div class="service-card__media">
+                <img src="assets/img/service-paint.svg" width="800" height="600" loading="lazy" decoding="async" alt="Paint panel showing swirl marks on one side and corrected finish on the other">
+              </div>
+              <div class="service-card__body">
+                <span class="service-card__num">04</span>
+                <h3>Paint Correction</h3>
+                <p>Professional paint enhancement designed to reduce the appearance of light scratches, swirl marks, and imperfections.</p>
+                <button class="link-btn" type="button" data-open-service="paint">Learn More <span class="link-btn__arrow"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></button>
+              </div>
+            </article>
+          </li>
+          <li data-reveal="card">
+            <article class="service-card" data-service="ceramic">
+              <div class="service-card__media">
+                <img src="assets/img/service-ceramic.svg" width="800" height="600" loading="lazy" decoding="async" alt="Water beading on a glossy ceramic-coated panel">
+              </div>
+              <div class="service-card__body">
+                <span class="service-card__num">05</span>
+                <h3>Ceramic Coating</h3>
+                <p>Protective coating services designed to enhance shine and help protect vehicle paint.</p>
+                <button class="link-btn" type="button" data-open-service="ceramic">Learn More <span class="link-btn__arrow"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></button>
+              </div>
+            </article>
+          </li>
+          <li data-reveal="card">
+            <article class="service-card" data-service="engine">
+              <div class="service-card__media">
+                <img src="assets/img/service-engine.svg" width="800" height="600" loading="lazy" decoding="async" alt="Clean engine bay">
+              </div>
+              <div class="service-card__body">
+                <span class="service-card__num">06</span>
+                <h3>Engine Bay Cleaning</h3>
+                <p>Careful cleaning and detailing of accessible engine bay surfaces.</p>
+                <button class="link-btn" type="button" data-open-service="engine">Learn More <span class="link-btn__arrow"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></button>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="section why" id="why" aria-labelledby="why-title">
+      <div class="orb orb--why" data-parallax="0.25" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow" data-reveal>Why Choose Us</p>
+          <h2 class="h2" id="why-title" data-reveal="split">Detailing that goes <span class="accent">beyond expectations.</span></h2>
+        </div>
+
+        <ul class="why__grid">
+          <li data-reveal="card">
+            <article class="why-card">
+              <span class="why-card__num">01</span>
+              <span class="icon-box"><svg width="22" height="22" aria-hidden="true"><use href="#i-van"/></svg></span>
+              <h3>We Come To You</h3>
+              <p>Convenient professional mobile detailing at your home or workplace.</p>
+            </article>
+          </li>
+          <li data-reveal="card">
+            <article class="why-card">
+              <span class="why-card__num">02</span>
+              <span class="icon-box"><svg width="22" height="22" aria-hidden="true"><use href="#i-target"/></svg></span>
+              <h3>Precision In Every Detail</h3>
+              <p>Careful attention to the areas that make your vehicle look and feel its best.</p>
+            </article>
+          </li>
+          <li data-reveal="card">
+            <article class="why-card">
+              <span class="why-card__num">03</span>
+              <span class="icon-box"><svg width="22" height="22" aria-hidden="true"><use href="#i-drop"/></svg></span>
+              <h3>Premium Products</h3>
+              <p>Quality detailing products and methods designed for professional results.</p>
+            </article>
+          </li>
+          <li data-reveal="card">
+            <article class="why-card">
+              <span class="why-card__num">04</span>
+              <span class="icon-box"><svg width="22" height="22" aria-hidden="true"><use href="#i-heart"/></svg></span>
+              <h3>Your Satisfaction Matters</h3>
+              <p>Friendly service, clear communication, and a commitment to doing the job right.</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE & AFTER ============ -->
+    <section class="section results" id="results" aria-labelledby="results-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow" data-reveal>Before &amp; After</p>
+          <h2 class="h2" id="results-title" data-reveal="split">See the <span class="accent">difference.</span></h2>
+          <p class="section-head__text" data-reveal>Drag the handle to compare. A clean, corrected finish changes how a vehicle looks, feels, and reflects light.</p>
+        </div>
+
+        <!-- EDIT: replace before-demo.svg / after-demo.svg with your own matching photos (same size & angle). -->
+        <figure class="ba-wrap" data-reveal="mask">
+          <div class="ba" style="--pos:50%">
+            <img class="ba__img ba__img--after" src="assets/img/after-demo.svg" width="1600" height="900" loading="lazy" decoding="async" alt="Simulated after image: glossy, clean sports car">
+            <div class="ba__before">
+              <img class="ba__img" src="assets/img/before-demo.svg" width="1600" height="900" loading="lazy" decoding="async" alt="Simulated before image: dusty, dull sports car with swirl marks">
+            </div>
+            <span class="ba__label ba__label--before" aria-hidden="true">Before</span>
+            <span class="ba__label ba__label--after" aria-hidden="true">After</span>
+            <div class="ba__handle" role="slider" tabindex="0" aria-label="Before and after comparison" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="Showing 50% before">
+              <span class="ba__knob" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24"><path d="M9 6 3 12l6 6M15 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </div>
+          <figcaption class="ba-caption">
+            <span class="tag">Demonstration imagery</span>
+            Illustrative, computer-generated example — not a photo of an actual customer vehicle or result.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="section book" id="book" aria-labelledby="book-title">
+      <div class="orb orb--book" data-parallax="0.2" aria-hidden="true"></div>
+      <div class="container book__grid">
+        <div class="book__intro">
+          <p class="eyebrow" data-reveal>Request an Appointment</p>
+          <h2 class="h2 h2--sm" id="book-title" data-reveal="split">Ready to give your car the attention it <span class="accent">deserves?</span></h2>
+          <p class="lead" data-reveal>Tell us a little about your vehicle and the service you're looking for. We'll help you take the next step toward a cleaner, better-looking ride.</p>
+
+          <ol class="steps" data-stagger>
+            <li data-reveal><span>1</span><div><strong>Send your request</strong><p>Share your vehicle, service, and preferred time.</p></div></li>
+            <li data-reveal><span>2</span><div><strong>We confirm availability</strong><p>We'll call, text, or email to confirm details and your quote.</p></div></li>
+            <li data-reveal><span>3</span><div><strong>We arrive, you relax</strong><p>We detail on-site while you go about your day.</p></div></li>
+          </ol>
+
+          <a class="contact-card" href="tel:+10000000000" data-reveal>
+            <span class="icon-box"><svg width="22" height="22" aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <span><small>Prefer to talk?</small><strong>000-000-0000</strong></span>
+          </a>
+        </div>
+
+        <div class="form-card" data-reveal>
+          <!--
+            NETLIFY FORMS: name="booking" + data-netlify="true" + hidden form-name input are required.
+            Netlify detects this form at deploy time. Submissions appear in Netlify → Forms.
+          -->
+          <form class="form" id="booking-form" name="booking" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="booking">
+            <p class="hp-field" aria-hidden="true">
+              <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
+
+            <div class="form__head">
+              <h3>Appointment Request</h3>
+              <p>Fields marked <span class="req" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+            </div>
+
+            <div class="form__alert" id="form-alert" role="alert" hidden></div>
+
+            <div class="form__grid">
+              <div class="field">
+                <label for="f-name">Full Name <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name" placeholder="Jordan Rivera">
+                <p class="field__error" id="e-name"></p>
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone Number <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="e-phone" placeholder="(305) 555-0123">
+                <p class="field__error" id="e-phone"></p>
+              </div>
+              <div class="field">
+                <label for="f-email">Email Address <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email" placeholder="you@email.com">
+                <p class="field__error" id="e-email"></p>
+              </div>
+              <div class="field">
+                <label for="f-vehicle">Vehicle Make &amp; Model <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-vehicle" name="vehicle" type="text" required aria-describedby="e-vehicle" placeholder="e.g. 2022 Tesla Model 3">
+                <p class="field__error" id="e-vehicle"></p>
+              </div>
+              <div class="field">
+                <label for="f-type">Vehicle Type <span class="req" aria-hidden="true">*</span></label>
+                <select id="f-type" name="vehicle_type" required aria-describedby="e-type">
+                  <option value="" selected disabled>Select type</option>
+                  <option>Sedan</option>
+                  <option>SUV</option>
+                  <option>Truck</option>
+                  <option>Other</option>
+                </select>
+                <p class="field__error" id="e-type"></p>
+              </div>
+              <div class="field">
+                <label for="f-service">Service Requested <span class="req" aria-hidden="true">*</span></label>
+                <select id="f-service" name="service" required aria-describedby="e-service">
+                  <option value="" selected disabled>Select a service</option>
+                  <option value="Exterior Detailing">Exterior Detailing</option>
+                  <option value="Interior Detailing">Interior Detailing</option>
+                  <option value="Full Interior & Exterior Detail">Full Interior &amp; Exterior Detail</option>
+                  <option value="Paint Correction">Paint Correction</option>
+                  <option value="Ceramic Coating">Ceramic Coating</option>
+                  <option value="Engine Bay Cleaning">Engine Bay Cleaning</option>
+                  <option value="Not sure - help me choose">Not sure — help me choose</option>
+                </select>
+                <p class="field__error" id="e-service"></p>
+              </div>
+              <div class="field">
+                <label for="f-date">Preferred Date <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-date" name="preferred_date" type="date" required aria-describedby="e-date">
+                <p class="field__error" id="e-date"></p>
+              </div>
+              <div class="field">
+                <label for="f-time">Preferred Time <span class="req" aria-hidden="true">*</span></label>
+                <select id="f-time" name="preferred_time" required aria-describedby="e-time">
+                  <option value="" selected disabled>Select a time window</option>
+                  <option>Morning (8am – 11am)</option>
+                  <option>Midday (11am – 2pm)</option>
+                  <option>Afternoon (2pm – 5pm)</option>
+                  <option>Flexible</option>
+                </select>
+                <p class="field__error" id="e-time"></p>
+              </div>
+              <div class="field field--full">
+                <label for="f-address">Service Address / ZIP Code <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-address" name="address" type="text" autocomplete="street-address" required aria-describedby="e-address" placeholder="Street address or ZIP code">
+                <p class="field__error" id="e-address"></p>
+              </div>
+              <div class="field field--full">
+                <label for="f-details">Additional Details</label>
+                <textarea id="f-details" name="details" rows="4" placeholder="Vehicle condition, pet hair, stains, parking/water access, gate codes…"></textarea>
+              </div>
+            </div>
+
+            <p class="form__note">
+              <svg width="16" height="16" aria-hidden="true"><use href="#i-clock"/></svg>
+              This is an appointment <strong>request</strong>, not a confirmed booking. We'll contact you to confirm availability and pricing.
+            </p>
+
+            <button class="btn btn--primary btn--glow btn--block form__submit" type="submit">
+              <span class="form__submit-label">Request My Appointment</span>
+              <span class="spinner" aria-hidden="true"></span>
+              <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+          </form>
+
+          <div class="form-success" id="form-success" hidden>
+            <span class="form-success__icon"><svg width="34" height="34" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <h3 tabindex="-1">Request received!</h3>
+            <p class="form-success__msg">Thanks — your appointment request has been sent. We'll reach out shortly to confirm availability.</p>
+            <p class="form-success__small">Need it sooner? Call <a href="tel:+10000000000">000-000-0000</a>.</p>
+            <button class="btn btn--ghost" type="button" id="form-reset">Submit another request</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="cta__bg" aria-hidden="true">
+        <div class="cta__beams"><span></span><span></span><span></span><span></span></div>
+        <div class="cta__glow"></div>
+      </div>
+      <div class="container cta__inner">
+        <h2 class="cta__title" id="cta-title" data-reveal="split">Make every drive feel <span class="accent">brand new.</span></h2>
+        <p class="cta__sub" data-reveal>Premium detailing. Exceptional care. Delivered to you.</p>
+        <div data-reveal><a class="btn btn--primary btn--glow btn--lg" href="#book">Book Your Detail <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </div>
+      <div class="cta__car" aria-hidden="true">
+        <img src="assets/img/hero-car.svg" width="1200" height="440" loading="lazy" decoding="async" alt="">
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contact" aria-labelledby="footer-title">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand" href="#home">
+            <svg class="brand__mark" viewBox="0 0 64 64" width="34" height="34" aria-hidden="true"><use href="#brand-mark"/></svg>
+            <span class="brand__text" id="footer-title">Mobile Auto<b>Detailing</b></span>
+          </a>
+          <p>Premium mobile auto detailing for Miami, FL and surrounding areas. We bring the showroom to your driveway.</p>
+          <!-- EDIT: replace with your real social profile URLs -->
+          <ul class="socials">
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" aria-hidden="true"><use href="#i-ig"/></svg></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" aria-hidden="true"><use href="#i-fb"/></svg></a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg width="20" height="20" aria-hidden="true"><use href="#i-tt"/></svg></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg width="20" height="20" aria-hidden="true"><use href="#i-yt"/></svg></a></li>
+          </ul>
+        </div>
+
+        <nav class="footer__col" aria-label="Footer">
+          <h3>Navigate</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">Why Choose Us</a></li>
+            <li><a href="#results">Before &amp; After</a></li>
+            <li><a href="#book">Book Now</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h3>Contact</h3>
+          <ul class="footer__contact">
+            <li><a href="tel:+10000000000"><svg width="18" height="18" aria-hidden="true"><use href="#i-phone"/></svg>000-000-0000</a></li>
+            <li><a href="mailto:book@yourbusiness.com"><svg width="18" height="18" aria-hidden="true"><use href="#i-mail"/></svg>book@yourbusiness.com</a></li>
+            <li><span><svg width="18" height="18" aria-hidden="true"><use href="#i-pin"/></svg>Serving Miami, FL &amp; surrounding areas</span></li>
+            <li><span><svg width="18" height="18" aria-hidden="true"><use href="#i-clock"/></svg>Mon–Sat · 8:00am – 6:00pm</span></li>
+          </ul>
+        </div>
+
+        <div class="footer__col footer__cta">
+          <h3>Ready when you are</h3>
+          <p>Send a request and we'll confirm a time that works for you.</p>
+          <a class="btn btn--primary btn--sm" href="#book">Request a Quote <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="year">2026</span> Mobile Auto Detailing. All rights reserved.</p>
+        <a class="to-top" href="#home">Back to top <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Service details popup (content filled from script.js) -->
+  <dialog class="service-dialog" id="service-dialog" aria-labelledby="sd-title">
+    <div class="service-dialog__inner">
+      <button class="service-dialog__close" type="button" aria-label="Close" data-close-dialog>
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="service-dialog__media"><img id="sd-img" src="assets/img/service-full.svg" width="800" height="600" alt=""></div>
+      <div class="service-dialog__body">
+        <p class="eyebrow" id="sd-num">Service</p>
+        <h3 id="sd-title">Service</h3>
+        <p id="sd-desc"></p>
+        <h4>What's typically included</h4>
+        <ul class="checklist" id="sd-list"></ul>
+        <dl class="service-dialog__meta">
+          <div><dt>Ideal for</dt><dd id="sd-ideal"></dd></div>
+          <div><dt>Pricing</dt><dd>Quoted per vehicle based on size &amp; condition</dd></div>
+        </dl>
+        <button class="btn btn--primary btn--glow btn--block" type="button" id="sd-cta">Request This Service <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
