@@ -340,55 +340,15 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 .hero__sub { max-width: 46ch; color: var(--muted); font-size: clamp(1rem, 1.3vw, 1.15rem); line-height: 1.7; }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; }
 
-/* Phones/tablets: car sits in the flow directly under the headline */
-.hero__car {
-  position: relative; z-index: 1;
-  width: 100%;
-  margin: clamp(8px, 3vw, 28px) 0 0;
-  will-change: transform;
-}
-.hero__car-light {
-  position: absolute; left: 10%; right: 10%; top: 10%; bottom: 0;
-  background: radial-gradient(50% 50% at 50% 60%, rgba(53, 109, 255, .55), transparent 70%);
-  filter: blur(30px);
-  animation: light-sweep 9s var(--ease-in-out) infinite alternate;
-}
-@keyframes light-sweep { from { transform: translateX(-12%) scaleX(.9); opacity: .7; } to { transform: translateX(12%) scaleX(1.1); opacity: 1; } }
-.hero__car-float { animation: float 7s var(--ease-in-out) infinite; }
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-.hero__car-img { position: relative; }
-.hero__car-img img { width: 100%; }
-.hero__sheen {
-  position: absolute; inset: 0; overflow: hidden; pointer-events: none;
-  -webkit-mask: url("assets/img/hero-car.svg") center / 100% 100% no-repeat;
-  mask: url("assets/img/hero-car.svg") center / 100% 100% no-repeat;
-  mix-blend-mode: screen;
-}
-.hero__sheen::before {
-  content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 40%;
-  background: linear-gradient(100deg, transparent 0%, rgba(180, 205, 255, .5) 50%, transparent 100%);
-  transform: translateX(-120%);
-  animation: sheen 7s 2.6s var(--ease-in-out) infinite;
-}
-@keyframes sheen { 0% { transform: translateX(-120%); } 35%, 100% { transform: translateX(320%); } }
-
 .hero__meta { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 10px 24px; color: var(--muted); font-size: .85rem; }
 
-/* Desktop hero: headline across the top, copy + CTAs left, car right */
+/* Desktop hero: headline across the top, copy + CTAs below */
 @media (min-width: 961px) {
   .hero { padding-bottom: 0; }
-  .hero__content { position: static; } /* car positions against .hero */
   .hero__title { max-width: none; font-size: clamp(3rem, 6.3vw, 7rem); }
-  .hero__bottom { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 26px; max-width: min(440px, 36vw); }
+  .hero__bottom { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 26px; max-width: min(560px, 48vw); }
   .hero__meta { flex-direction: column; gap: 10px; margin-top: 6px; }
-  .hero__car {
-    position: absolute; right: -5vw; bottom: clamp(24px, 5vh, 64px);
-    width: min(64vw, 1080px); margin: 0; padding: 0;
-  }
   .scroll-cue { bottom: 26px; }
-}
-@media (min-width: 961px) and (max-width: 1180px) {
-  .hero__car { width: 70vw; right: -12vw; }
 }
 .hero__meta li { display: inline-flex; align-items: center; gap: 8px; }
 .hero__meta svg { color: var(--blue-2); }
@@ -401,13 +361,9 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 /* Hero entrance (driven by .is-ready on <html>) */
 .js .w > span { transform: translateY(110%); transition: transform 1.2s var(--ease); transition-delay: calc(var(--i) * 90ms + 100ms); }
 .js [data-hero] { opacity: 0; transform: translateY(24px); transition: opacity 1s var(--ease), transform 1.2s var(--ease); transition-delay: calc(var(--d) * 90ms + 250ms); }
-.js .hero__car-img img { opacity: 0; transform: translateX(14%) scale(.96); filter: blur(6px); transition: opacity 1.6s var(--ease), transform 1.8s var(--ease), filter 1.6s var(--ease); transition-delay: .45s; }
-.js .hero__car-light { opacity: 0; transition: opacity 2s .6s; }
 .js .scroll-cue { opacity: 0; transition: opacity 1s 1.6s; }
 .is-ready .w > span, .reveal-all .w > span { transform: none; }
 .is-ready [data-hero], .reveal-all [data-hero] { opacity: 1; transform: none; }
-.is-ready .hero__car-img img, .reveal-all .hero__car-img img { opacity: 1; transform: none; filter: none; }
-.is-ready .hero__car-light, .reveal-all .hero__car-light { opacity: 1; }
 .is-ready .scroll-cue, .reveal-all .scroll-cue { opacity: 1; }
 
 /* ---------- Marquee ---------- */
@@ -642,8 +598,9 @@ main { overflow-x: clip; }
 .cta__inner { position: relative; z-index: 2; display: grid; justify-items: center; gap: 22px; }
 .cta__title { font-size: clamp(2.5rem, 7vw, 6.4rem); font-weight: 900; line-height: .95; letter-spacing: -0.025em; max-width: 14ch; }
 .cta__sub { color: #c4cbe0; font-size: clamp(1rem, 1.5vw, 1.25rem); margin-bottom: 10px; }
-.cta__car { position: relative; z-index: 1; width: min(1100px, 112vw); margin: clamp(10px, 3vw, 40px) auto -2%; transform: scaleX(-1); }
-.cta__car img { width: 100%; filter: drop-shadow(0 -10px 60px rgba(53, 109, 255, .35)); }
+.cta__car { position: relative; z-index: 1; width: min(1200px, calc(100% - 2 * var(--gutter))); margin: clamp(24px, 4vw, 56px) auto clamp(48px, 6vw, 96px); border-radius: var(--radius); overflow: hidden; box-shadow: 0 -10px 80px rgba(53, 109, 255, .25); }
+.cta__car::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5, 6, 8, .35) 0%, transparent 40%, rgba(5, 6, 8, .55) 100%); }
+.cta__car img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
 
 /* ---------- Footer ---------- */
 .footer { position: relative; background: var(--bg-3); border-top: 1px solid var(--line); padding: clamp(64px, 8vw, 100px) 0 32px; }
@@ -746,7 +703,6 @@ main { overflow-x: clip; }
   .hero__bottom { margin-top: 8px; gap: 22px; }
   .hero__ctas { width: 100%; display: grid; grid-template-columns: 1fr; gap: 12px; }
   .hero__ctas .btn { width: 100%; }
-  .hero__car { width: 118vw; margin: 4px 0 0 calc(-9vw - var(--gutter)); }
   .hero__meta { gap: 10px 18px; font-size: .8rem; }
   .hero__grid { height: 34%; }
 
@@ -767,7 +723,7 @@ main { overflow-x: clip; }
   .contact-card { width: 100%; }
 
   .cta { min-height: 0; }
-  .cta__car { width: 160vw; margin-left: -30vw; }
+  .cta__car img { aspect-ratio: 4 / 3; }
   .btn--lg { --h: 58px; padding: 0 30px; }
 
   .footer__top { grid-template-columns: 1fr; gap: 36px; }
@@ -778,7 +734,6 @@ main { overflow-x: clip; }
 
 @media (max-height: 700px) and (min-width: 961px) {
   .hero__title { font-size: clamp(2.6rem, 6vw, 5.4rem); }
-  .hero__car { width: min(980px, 90vw); }
 }
 
 /* ==========================================================================
@@ -787,8 +742,7 @@ main { overflow-x: clip; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
-  .js [data-reveal], .js [data-reveal] .sw__i, .js .w > span, .js [data-hero], .js .hero__car-img img, .js .nav, .js .scroll-cue, .js .hero__car-light,
+  .js [data-reveal], .js [data-reveal] .sw__i, .js .w > span, .js [data-hero], .js .nav, .js .scroll-cue,
   .js [data-reveal="card"] .service-card__media img { opacity: 1 !important; transform: none !important; filter: none !important; clip-path: none !important; }
   .loader { display: none; }
-  .hero__sheen { display: none; }
 }

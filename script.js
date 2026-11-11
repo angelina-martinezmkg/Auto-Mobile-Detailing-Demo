@@ -26,42 +26,42 @@
      ------------------------------------------------------------------ */
   var SERVICE_DETAILS = {
     exterior: {
-      num: '01', title: 'Exterior Detailing', img: 'assets/img/service-exterior.svg',
+      num: '01', title: 'Exterior Detailing', img: 'assets/img/service-exterior.jpg',
       formValue: 'Exterior Detailing',
       desc: 'A careful, hands-on exterior refresh that removes everyday grime and leaves your paint, glass, and wheels looking crisp.',
       list: ['Pre-rinse and foam pre-wash', 'Two-bucket hand wash', 'Wheel faces, barrels & tire cleaning', 'Tire dressing', 'Exterior glass cleaning', 'Hand dry and finishing touches'],
       ideal: 'Regular upkeep and a quick, noticeable refresh'
     },
     interior: {
-      num: '02', title: 'Interior Detailing', img: 'assets/img/service-interior.svg',
+      num: '02', title: 'Interior Detailing', img: 'assets/img/service-interior.jpg',
       formValue: 'Interior Detailing',
       desc: 'A thorough interior clean focused on the surfaces you see and touch every day.',
       list: ['Full vacuum: seats, carpets, mats & trunk', 'Dashboard, console & door panel detailing', 'Cup holders, vents & crevices', 'Interior glass & mirrors', 'Surface wipe-down & refresh'],
       ideal: 'Daily drivers, family vehicles, rideshare cars'
     },
     full: {
-      num: '03', title: 'Full Interior & Exterior Detail', img: 'assets/img/service-full.svg',
+      num: '03', title: 'Full Interior & Exterior Detail', img: 'assets/img/service-full.jpg',
       formValue: 'Full Interior & Exterior Detail',
       desc: 'Our most complete cleaning package — combining full exterior and interior detailing in one visit.',
       list: ['Everything in Exterior Detailing', 'Everything in Interior Detailing', 'Door jambs & entry areas', 'Final walkthrough inspection'],
       ideal: 'Seasonal deep cleans, selling or trading in, special occasions'
     },
     paint: {
-      num: '04', title: 'Paint Correction', img: 'assets/img/service-paint.svg',
+      num: '04', title: 'Paint Correction', img: 'assets/img/service-paint.jpg',
       formValue: 'Paint Correction',
       desc: 'Machine polishing designed to reduce the appearance of light scratches, swirl marks, and other surface imperfections. Results depend on the condition and depth of the defects.',
       list: ['Wash & decontamination prep', 'Paint inspection under lighting', 'Machine compounding / polishing', 'Panel wipe & final inspection'],
       ideal: 'Dull, hazy, or swirled paint; prep before ceramic coating'
     },
     ceramic: {
-      num: '05', title: 'Ceramic Coating', img: 'assets/img/service-ceramic.svg',
+      num: '05', title: 'Ceramic Coating', img: 'assets/img/service-ceramic.jpg',
       formValue: 'Ceramic Coating',
       desc: 'A protective coating applied to properly prepared paint to enhance gloss and help make future cleaning easier. Durability varies by product and care.',
       list: ['Wash & decontamination', 'Surface prep (polish recommended)', 'Coating application & leveling', 'Cure guidance and aftercare tips'],
       ideal: 'New vehicles or freshly corrected paint'
     },
     engine: {
-      num: '06', title: 'Engine Bay Cleaning', img: 'assets/img/service-engine.svg',
+      num: '06', title: 'Engine Bay Cleaning', img: 'assets/img/service-engine.jpg',
       formValue: 'Engine Bay Cleaning',
       desc: 'Careful cleaning and dressing of accessible engine bay surfaces, with sensitive components protected first.',
       list: ['Cover sensitive components', 'Degrease accessible surfaces', 'Gentle agitation & controlled rinse', 'Dry and dress plastics & hoses'],
@@ -205,11 +205,7 @@
 
   /* ---------------- GSAP scroll effects (parallax etc.) ---------------- */
   if (hasGSAP && !reduceMotion) {
-    // Hero car drifts down & content lifts away as you scroll
-    gsap.to('.hero__car', {
-      yPercent: 18, scale: 0.95, ease: 'none',
-      scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 0.6 }
-    });
+    // Hero content lifts away as you scroll
     gsap.to('.hero__title, .hero__bottom', {
       y: -80, opacity: 0.15, ease: 'none',
       scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 0.6 }
@@ -224,9 +220,9 @@
       });
     });
 
-    // Final CTA: car rolls in and the scene opens up
-    gsap.fromTo('.cta__car', { xPercent: -14, opacity: 0.2 }, {
-      xPercent: 0, opacity: 1, ease: 'none',
+    // Final CTA: photo rises in and the scene opens up
+    gsap.fromTo('.cta__car', { y: 60, opacity: 0.2 }, {
+      y: 0, opacity: 1, ease: 'none',
       scrollTrigger: { trigger: '.cta', start: 'top 85%', end: 'center 60%', scrub: 0.8 }
     });
     gsap.fromTo('.cta__glow', { scale: 0.6, opacity: 0.3 }, {

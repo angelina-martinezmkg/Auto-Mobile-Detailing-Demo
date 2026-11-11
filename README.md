@@ -22,15 +22,15 @@ mobile-auto-detailing/
 └── assets/
     └── img/
         ├── favicon.svg
-        ├── hero-car.svg            ← hero + final CTA car
-        ├── service-exterior.svg    ← service card images (×6)
-        ├── service-interior.svg
-        ├── service-full.svg
-        ├── service-paint.svg
-        ├── service-ceramic.svg
-        ├── service-engine.svg
-        ├── before-demo.svg         ← before/after slider (demonstration)
-        └── after-demo.svg
+        ├── service-exterior.jpg    ← service card photos (×6)
+        ├── service-interior.jpg
+        ├── service-full.jpg
+        ├── service-paint.jpg
+        ├── service-ceramic.jpg
+        ├── service-engine.jpg
+        ├── before.jpg              ← before/after slider (demonstration)
+        ├── after.jpg
+        └── cta-car.jpg             ← final call-to-action photo
 ```
 
 ---
@@ -126,16 +126,15 @@ At the top of `style.css`, in `:root`:
 Fonts are Archivo (headlines) and Inter (body) from Google Fonts, linked in `<head>`.
 
 ### Images: ⚠️ replace before launch
-All artwork in `assets/img/` is **original, computer-generated placeholder illustration** made for this project. It's safe to use, but it isn't photography of your work.
+The photos in `assets/img/` are royalty-free stock photography from [Unsplash](https://unsplash.com/license) (free for commercial use). They look real, but they aren't photos of your own work — swap them for your own when you can.
 
 | File | Use | Recommended replacement |
 |---|---|---|
-| `hero-car.svg` | Hero + final CTA | Transparent **PNG/WebP** cutout of a dark car, ~2000×730 px |
-| `service-*.svg` | Service cards | **JPG/WebP**, 1200×900 px (4:3), under ~200 KB each |
-| `before-demo.svg` / `after-demo.svg` | Comparison slider | Your **real** before/after photos: same vehicle, same angle, same size, 1600×900 px |
+| `service-*.jpg` | Service cards | **JPG/WebP**, 1200×900 px (4:3), under ~200 KB each |
+| `before.jpg` / `after.jpg` | Comparison slider | Currently a stock photo (after) and an AI-edited dirty version of it (before). Replace with your own photos of the same vehicle, same angle, same size (1600×900 px). |
+| `cta-car.jpg` | Final call-to-action | Wide **JPG/WebP**, ~1800×770 px |
 
-To swap an image, either keep the same file name, or update the `src=""` in `index.html`.
-If you change the hero image name, also update the two `url("assets/img/hero-car.svg")` lines in `style.css` (they power the light-sweep effect across the car).
+To swap an image, either keep the same file name, or update the `src=""` in `index.html` (service images are also listed in `script.js` for the details pop-up).
 
 **Honesty note:** the before/after section is labeled "Demonstration imagery." Once you upload real photos of your own work, you can remove that caption in `index.html` (the `<figcaption class="ba-caption">`) and the label text baked into the demo images.
 
